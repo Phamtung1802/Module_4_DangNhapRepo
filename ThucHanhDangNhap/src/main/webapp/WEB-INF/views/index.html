@@ -1,0 +1,15 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"></head>
+<body>
+<h3>Customers</h3>
+<div sec:authorize="isAuthenticated()">
+    <a th:href="@{/user}" th:text="${user}">user</a> | <a th:href="@{/logout}">Logout</a>
+</div><p></p>
+
+</body>
+</html>
+
